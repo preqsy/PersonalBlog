@@ -117,13 +117,12 @@
             <div class="single-post">
               <div class="post-meta"><span class="date">{{lifestyles.categories}}</span> <span class="mx-1">&bullet;</span> <span>{{lifestyles.created_on}}</span></div>
               <h1 class="mb-5">{{lifestyles.title}}</h1>
-
-              <p>{{lifestyles.body}}</p>
-                {% if lifestyles.image %}
-                <img src="{% static lifestyles.image.url %}" alt="" class="img-fluid">
+              {% if lifestyles.image %}
+                <img src="{{lifestyles.image.url}}" alt="" class="img-fluid">
               {% else %}
 
               {% endif %}
+              <p>{{lifestyles.body}}</p>
 
             </div><!-- End Single Post Content -->
 

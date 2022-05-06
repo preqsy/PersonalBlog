@@ -117,13 +117,13 @@
             <div class="single-post">
               <div class="post-meta"><span class="date">{{cultures.categories}}</span> <span class="mx-1">&bullet;</span> <span>{{cultures.created_on}}</span></div>
               <h1 class="mb-5">{{cultures.title}}</h1>
-
-              <p>{{cultures.body}}</p>
-                {% if cultures.image %}
-                <img src="{% static cultures.image.url %}" alt="" class="img-fluid">
+              {% if cultures.image %}
+                <img src="{{cultures.image.url}}" alt="" class="img-fluid">
               {% else %}
 
               {% endif %}
+              <p>{{cultures.body}}</p>
+
 
             </div><!-- End Single Post Content -->
 

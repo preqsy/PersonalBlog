@@ -163,7 +163,7 @@
             <div class="post-entry-1 lg">
               {% for headline in headlines %}
               {% if headline.id == 1 %}
-              <a href="single_headline/{{headline.id}}"><img src="{% static headline.image.url %}" alt=""
+              <a href="single_headline/{{headline.id}}"><img src="{{headline.image.url}}" alt=""
                   class="img-fluid"></a>
               <div class="post-meta"><span class="date">{{headline.categories}}</span> <span
                   class="mx-1">&bullet;</span> <span>{{headline.created_on}}</span></div>
@@ -187,7 +187,7 @@
               <div class="col-lg-4 border-start custom-border">
                 <div class="post-entry-1">
                   {% for post in posts %}
-                   <a href="single_post/{{post.id}}"><img src="{% static post.image.url %}" alt=""
+                   <a href="single_post/{{post.id}}"><img src="{{post.image.url}}" alt=""
                       class="img-fluid"></a>
                     <div class="post-meta"><span class="date">{{post.categories}}</span> <span
                         class="mx-1">&bullet;</span> <span>{{post.created_on}}</span></div>
@@ -198,7 +198,7 @@
               <div class="col-lg-4 border-start custom-border">
                 <div class="post-entry-1">
                   {% for post in post1 %}
-                  <a href="single_post/{{post.id}}"><img src="{% static post.image.url %}" alt="" class="img-fluid"></a>
+                  <a href="single_post/{{post.id}}"><img src="{{post.image.url}}" alt="" class="img-fluid"></a>
                   <div class="post-meta"><span class="date">{{post.categories}}</span> <span
                       class="mx-1">&bullet;</span> <span>{{post.created_on}}</span></div>
                   <h2><a href="single_post/{{post.id}}">{{post.title}}</a></h2>
@@ -249,7 +249,7 @@
               {% for culture in cultures %}
               {% if culture.id == 1 %}
               <a href="single_culture/{{culture.id}}" class="me-4 thumbnail mb-4 mb-lg-0 d-inline-block">
-                <img src="{% static culture.image.url %}" alt="" class="img-fluid">
+                <img src="{{culture.image.url}}" alt="" class="img-fluid">
               </a>
               <div>
                 <div class="post-meta"><span class="date">Culture</span> <span class="mx-1">&bullet;</span>
@@ -272,7 +272,7 @@
                 <div class="post-entry-1 border-bottom">
                   {% for culture in cultures %}
                   {% if culture.id == 2 %}
-                  <a href="single_culture/{{culture.id}}"><img src="{% static culture.image.url %}" alt=""
+                  <a href="single_culture/{{culture.id}}"><img src="{{culture.image.url}}" alt=""
                       class="img-fluid"></a>
                   <div class="post-meta"><span class="date">Culture</span> <span class="mx-1">&bullet;</span>
                     <span>{{culture.created_on}}</span></div>
@@ -298,7 +298,7 @@
                 <div class="post-entry-1">
                   {% for culture in cultures %}
                   {% if culture.id == 3 %}
-                  <a href="single_culture/{{culture.id}}"><img src="{% static culture.image.url %}" alt=""
+                  <a href="single_culture/{{culture.id}}"><img src="{{culture.image.url}}" alt=""
                       class="img-fluid"></a>
                   <div class="post-meta"><span class="date">Culture</span> <span class="mx-1">&bullet;</span>
                     <span>{{culture.created_on}}</span></div>
@@ -345,7 +345,7 @@
               {% for business in businesses %}
               {% if business.id == 1 %}
               <a href="single_business/{{business.id}}" class="me-4 thumbnail d-inline-block mb-4 mb-lg-0">
-                <img src="{% static business.image.url %}" alt="" class="img-fluid">
+                <img src="{{business.image.url}}" alt="" class="img-fluid">
               </a>
               <div>
                 <div class="post-meta"><span class="date">Business</span> <span class="mx-1">&bullet;</span>
@@ -368,7 +368,7 @@
                 <div class="post-entry-1 border-bottom">
                   {% for business in businesses %}
                   {% if business.id == 2 %}
-                  <a href="single_business/{{business.id}}"><img src="{% static business.image.url %}" alt=""
+                  <a href="single_business/{{business.id}}"><img src="{{business.image.url}}" alt=""
                       class="img-fluid"></a>
                   <div class="post-meta"><span class="date">Business</span> <span class="mx-1">&bullet;</span>
                     <span>{{business.created_on}}</span></div>
@@ -394,7 +394,7 @@
                 <div class="post-entry-1">
                   {% for business in businesses %}
                   {% if business.id == 3 %}
-                  <a href="single_business/{{business.id}}"><img src="{% static business.image.url %}" alt=""
+                  <a href="single_business/{{business.id}}"><img src="{{business.image.url}}" alt=""
                       class="img-fluid"></a>
                   <div class="post-meta"><span class="date">Business</span> <span class="mx-1">&bullet;</span>
                     <span>{{business.created_on}}</span></div>
@@ -494,7 +494,7 @@
             <div class="post-entry-1 lg">
               {% for headline in headlines %}
               {% if headline.id == 2 %}
-              <a href="single_headline/{{headline.id}}"><img src="{% static headline.image.url %}" alt=""
+              <a href="single_headline/{{headline.id}}"><img src="{{headline.image.url}}" alt=""
                   class="img-fluid"></a>
               <div class="post-meta"><span class="date">Lifestyle</span> <span class="mx-1">&bullet;</span>
                 <span>{{headline.created_on}}</span></div>
@@ -530,7 +530,7 @@
             <div class="col-lg-4 border-start custom-border">
               {% for lifestyle in lifestyles %}
               {% if lifestyle.id <= 3 %} <div class="post-entry-1">
-                <a href="single_lifestyle/{{lifestyle.id}}"><img src="{% static lifestyle.image.url %}" alt=""
+                <a href="single_lifestyle/{{lifestyle.id}}"><img src="{{lifestyle.image.url}}" alt=""
                     class="img-fluid"></a>
                 <div class="post-meta"><span class="date">Lifestyle</span> <span class="mx-1">&bullet;</span>
                   <span>{{lifestyle.created_on}}</span>
@@ -544,7 +544,7 @@
           <div class="col-lg-4 border-start custom-border">
             {% for lifestyle in lifestyles %}
             {% if lifestyle.id > 3 and lifestyle.id <= 6 %} <div class="post-entry-1">
-              <a href="single_lifestyle/{{lifestyle.id}}"><img src="{% static lifestyle.image.url %}" alt=""
+              <a href="single_lifestyle/{{lifestyle.id}}"><img src="{{lifestyle.image.url}}" alt=""
                   class="img-fluid"></a>
               <div class="post-meta"><span class="date">Lifestyle</span> <span class="mx-1">&bullet;</span>
                 <span>{{lifestyle.created_on}}</span>
@@ -609,7 +609,7 @@
 
               <li>
                 <a href="single_post/{{post.id}}" class="d-flex align-items-center">
-                  <img src="{% static post.image.url %}" alt="" class="img-fluid me-3">
+                  <img src="{{post.image.url}}" alt="" class="img-fluid me-3">
                   <div>
                     <div class="post-meta d-block"><span class="date">{{post.categories}}</span> <span class="mx-1">&bullet;</span>
                       <span>{{post.created_on}}</span>

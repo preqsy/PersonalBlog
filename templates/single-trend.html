@@ -117,13 +117,12 @@
             <div class="single-post">
               <div class="post-meta"><span class="date">{{trends.categories}}</span> <span class="mx-1">&bullet;</span> <span>{{trends.created_on}}</span></div>
               <h1 class="mb-5">{{trends.title}}</h1>
-
-              <p>{{trends.body}}</p>
                 {% if trends.image %}
-                <img src="{% static trends.image.url %}" alt="" class="img-fluid">
+                <img src="{{trends.image.url}}" alt="" class="img-fluid">
               {% else %}
 
               {% endif %}
+              <p>{{trends.body}}</p>
 
             </div><!-- End Single Post Content -->
 

@@ -117,13 +117,12 @@
             <div class="single-post">
               <div class="post-meta"><span class="date">{{headlines.categories}}</span> <span class="mx-1">&bullet;</span> <span>{{headlines.created_on}}</span></div>
               <h1 class="mb-5">{{headlines.title}}</h1>
-
-              <p>{{headlines.body}}</p>
                 {% if headlines.image %}
-                <img src="{% static headlines.image.url %}" alt="" class="img-fluid">
+                <img src="{{headlines.image.url}}" alt="" class="img-fluid">
               {% else %}
 
               {% endif %}
+              <p>{{headlines.body}}</p>
 
             </div><!-- End Single Post Content -->
 

@@ -35,7 +35,7 @@ class Post(models.Model):
     title = models.CharField(max_length=1000)
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField(blank=True, null=True)
+    image = models.ImageField(upload_to='new_image/', blank=True, null=True)
     authors = models.CharField(max_length=30, choices=AUTHOR_CHOICE, blank=True)
 
     class Meta:
@@ -79,7 +79,7 @@ class Post1(models.Model):
     title = models.CharField(max_length=1000)
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField(blank=True, null=True)
+    image = models.ImageField(upload_to='new_image/', blank=True, null=True)
     authors = models.CharField(max_length=30, choices=AUTHOR_CHOICE, blank=True)
 
     class Meta:
@@ -124,7 +124,7 @@ class Trending(models.Model):
     body = models.TextField(null=True, blank=True)
     categories = models.CharField(max_length=50, choices=CATEGORY_CHOICES)
     created_on = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField(blank=True, null=True)
+    image = models.ImageField(upload_to='new_image/', blank=True, null=True)
     authors = models.CharField(max_length=50, choices=AUTHOR_CHOICE)
 
     class Meta:
@@ -169,7 +169,7 @@ class Headline(models.Model):
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     author = models.CharField(max_length=50, choices=AUTHOR_CHOICE)
-    image = models.ImageField(blank=True, null=True)
+    image = models.ImageField(upload_to='new_image/', blank=True, null=True)
 
     class Meta:
         ordering = ['-created_on']
@@ -195,7 +195,7 @@ class Culture(models.Model):
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     author = models.CharField(max_length=50, choices=AUTHOR_CHOICE)
-    image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(upload_to='new_image/', null=True, blank=True)
 
     class Meta:
         ordering = ['-created_on']
@@ -221,7 +221,7 @@ class Business(models.Model):
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     author = models.CharField(max_length=50, choices=AUTHOR_CHOICE)
-    image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(upload_to='new_image/', null=True, blank=True)
 
     class Meta:
         ordering = ['-created_on']
@@ -247,7 +247,7 @@ class LifeStyle(models.Model):
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     author = models.CharField(max_length=50, choices=AUTHOR_CHOICE)
-    image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(upload_to='new_image/', null=True, blank=True)
 
     class Meta:
         ordering = ['-created_on']
